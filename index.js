@@ -133,6 +133,7 @@ module.exports.first = first;
  * @param {A Number} number: The length of the array to be returned. if number 
  * is 1, not a number, or not given, will return just return first element.
  * @return {An Array or A Value}: An array or last element in an array.
+ * Returns the last element in the array if no <number> is given.
  */
 function last(array, number) {
 //takes an array
@@ -164,8 +165,8 @@ module.exports.last = last;
  * 
  * @param{An Array} array: The array to be searched through for the value.
  * @param{A Value} value: The value to find the index of inside of the array.
- * @return(A Number) x or i: The first index you can find the value at inside of 
- * the array if -1 the value was never found in the provided array.
+ * @return(A Number) x or i: Returns the first index of the found given value
+ * inside the array. If the value was not found, -1 is returned.
  * 
  * 
  */
@@ -199,7 +200,7 @@ module.exports.indexOf = indexOf;
  * 
  * @param {An Array} array: The array to search for value.
  * @param {A Value} value: The value to be searched for.
- * @return{A Boolean} (exists > 0 ? true: false): The boolean true if value was 
+ * @return{A Boolean}: The boolean true if value was 
  * found in an array, false otherwise.
  */
  
@@ -318,7 +319,7 @@ module.exports.reject = reject;
  * 
  * @param {An array} array: An array to test the values truthiness of.
  * @param {A function} func: Function to evaluate the truthiness of values.
- * @return {An Array} [trueArray, falseArray]: Returns an array with two values. 
+ * @return {An Array}: Returns an array with two values. 
  * The first value is an array for all values that return true. The second is 
  * an array of all values that returned false.
  */
@@ -554,10 +555,12 @@ if (action === undefined) {
 module.exports.some = some;
  
  /**
- * reduce: Designed to take an array, a function, and an optional seed starting 
- * value and iterate through the given <array> performing the function action
- * on each element from starting position to end. Returns the value of
- * the last function call.
+ * reduce: Designed to take an collection, a function, and an optional 
+ * seed starting value, reduce iterates through the collection, calls the
+ * given function on each element, and uses the seed to accumulate data 
+ * from the function calls, and the end of the iteration returns a 
+ * single usable data type.
+
  * 
  * @param {An Array} collection: The array to be iterated through and containing
  * elements for function to be called upon.
