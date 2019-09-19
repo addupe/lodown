@@ -385,7 +385,7 @@ module.exports.map = map;
  * 
  * @param {An Array} array: The array containing values to be returned.
  * @param {A Property} property: A property/key variable for our array.
- * @return {An Array} _.map(array, a => a[property]);: Returns a new array with 
+ * @return {An Array}: Returns a new array with 
  * the property values of our given array.
  */
     
